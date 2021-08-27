@@ -2319,16 +2319,16 @@ select,
 {
     display: none;
 
-    padding: 40px;
+    background: url(../img/spoler.jpg);
+    background-size: cover;
+    padding: 15px;
 }
 .faq .spoler .hide-text p
 {
     font-size: 17px; 
 
     margin-bottom: 10px;
-    background: url(../img/spoler.jpg);
-    background-size: cover;
-    padding: 15px;
+   
 }
 .faq .spoler .title
 {
