@@ -2321,7 +2321,8 @@ select,
 
     background: url(../img/spoler.jpg);
     background-size: cover;
-    padding: 15px;
+    padding: 15px 40px;
+    margin: 0 -10px;
 }
 .faq .spoler .hide-text p
 {
