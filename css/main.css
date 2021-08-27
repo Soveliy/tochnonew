@@ -919,7 +919,7 @@ h2.title.hide-mob
     }
     h2.title.hide-mob.active:after
     {
-        transform: rotate(-90deg);
+        transform: rotate(0);
     }
 }
 
@@ -2321,7 +2321,7 @@ select,
 
     background: url(../img/spoler.jpg);
     background-size: cover;
-    padding: 15px 40px;
+    padding: 15px 30px 15px 105px;
     margin: 0 -10px;
 }
 .faq .spoler .hide-text p
