@@ -190,7 +190,7 @@ label.error
     border-radius: 3px;
 }
 
-.checkbox input:checked + .checkbox__text:after
+/* .checkbox input:checked + .checkbox__text:after
 {
     position: absolute;
     z-index: 9;
@@ -204,7 +204,13 @@ label.error
 
     border-radius: 1px;
     background: #585858;
-}
+} */
+
+ .checkbox input:checked + .checkbox__text:before{
+    background: url(../img/checked.jpg) no-repeat center center;
+    background-size: contain;
+    border-color: #0066FF;
+ }
 
 select,
 .select
@@ -443,12 +449,12 @@ body
     align-items: center;
     justify-content: center;
 }
-.btn-blue:hover
+.btn-blue:hover,.btn-blue:active
 {
     text-decoration: none; 
 
-    color: #06f;
-    background: #fff;
+    color: #fff;
+    background: #1E78FF;
 }
 
 .btn-blue-big
@@ -493,12 +499,11 @@ body
         min-height: 50px;
     }
 }
-.btn-blue-big:hover
+.btn-blue-big:hover,.btn-blue-big:active
 {
     text-decoration: none; 
 
-    color: #06f;
-    background: #fff;
+    background: #1E78FF;
 }
 
 .btn-outline
@@ -2050,6 +2055,9 @@ border-radius: 16px;
     flex-wrap: wrap;
     align-items: center;
 }
+.oformlenie .tab-pane  .radio-container {
+    margin-bottom: 15px;
+}
 .oformlenie .radio-container > span
 {
     font-size: 17px;
@@ -2201,10 +2209,10 @@ select,
     color: #fff; 
     background: #000;
 }
-.btn-outline-black:hover path
+/* .btn-outline-black:hover path
 {
     fill: #fff;
-}
+} */
 .btn-outline-black path
 {
     transition: all .3s;
