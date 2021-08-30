@@ -154,7 +154,7 @@ label.error
 
 .checkbox__text
 {
-    font-size: 15px;
+    font-size: 17px;
 
     position: relative;
 
@@ -1906,6 +1906,9 @@ border-radius: 16px;
         font-size: 22px;
     }
 }
+.oformlenie .checkbox{
+    padding: 12.5px;
+}
 @media (max-width: 750px)
 {
     .oformlenie
@@ -2910,4 +2913,8 @@ footer .copy a
     }
 
     
+}
+
+.title.active{
+    margin-bottom: 0 !important;
 }
