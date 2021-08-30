@@ -2918,3 +2918,6 @@ footer .copy a
 .title.active{
     margin-bottom: 0 !important;
 }
+.kak .title.active{
+    margin-bottom: 40px !important;
+}
