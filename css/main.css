@@ -2317,6 +2317,26 @@ select,
 {
     margin-bottom: 5px;
 }
+.faq .spoler .hide-text
+{
+    display: none;
+
+    background: url(../img/spoler.jpg);
+    background-size: cover;
+    padding: 15px 30px 15px 105px;
+  
+}
+@media (min-width:750px){
+    .faq .spoler .hide-text{
+        margin-top: -10px;
+        padding-left: 115px;
+    }
+}
+@media (max-width:1200px){
+    .faq .spoler .hide-text{
+        padding-left: 97px;
+    }
+}
 @media (max-width: 750px)
 {
     .faq .spoler
@@ -2325,16 +2345,13 @@ select,
         margin-bottom: 1px;
         margin-left: -15px;
     }
+    .faq .spoler .hide-text{
+        margin: 0 -10px;
+        padding: 15px 30px 15px 105px;
+    }
 }
-.faq .spoler .hide-text
-{
-    display: none;
 
-    background: url(../img/spoler.jpg);
-    background-size: cover;
-    padding: 15px 30px 15px 105px;
-    margin: 0 -10px;
-}
+
 .faq .spoler .hide-text p
 {
     font-size: 17px; 
@@ -2344,6 +2361,7 @@ select,
 }
 .faq .spoler .title
 {
+    position: relative;
     display: flex;
 
     padding: 23px 20px 23px 40px;
