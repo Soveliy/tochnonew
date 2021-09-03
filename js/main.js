@@ -115,7 +115,18 @@ $(function () {
       //Generic swipe handler for all directions
       swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
         if (direction === 'down') {
-          $('.modal').modal('hide');
+
+            $(this).closest(".modal").addClass("hide-modal");
+          // $(this).closest(".modal").modal('hide');
+
+          function removeModal() {
+            $(".modal-content__close").closest(".modal").modal("hide")
+            $(".hide-modal").removeClass("hide-modal")
+          }
+          
+          setTimeout(removeModal, 300);
+          // $('.modal').addClass('custom-close');
+          // $('.modal').modal('hide');
         }
       }
     });
@@ -185,3 +196,18 @@ function init() {
 
   myMap.geoObjects.add(myPlacemark);
 }
+
+$(".modal-content__close").click(function (){
+  console.log("close");
+  $(this).closest(".modal").addClass("hide-modal");
+  // $(this).closest(".modal").modal('hide');
+
+  function removeModal() {
+    $(".modal-content__close").closest(".modal").modal("hide")
+    $(".hide-modal").removeClass("hide-modal")
+  }
+  
+  setTimeout(removeModal, 300);
+});
+
+
