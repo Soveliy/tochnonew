@@ -293,23 +293,37 @@
           <div class="container">
             <h2 class="title text-center">Оформитесь за 20 минут</h2>
             <div class="form">
-              <form>
-                <input type="text" placeholder="Ваше имя и фамилия" name="name">
-                <input type="text" placeholder="Номер телефона" name="phone" required="">
+              <form id="1">
+               <div class="form__input">
+                <input type="text" placeholder=" " name="name" class="g-form__input" required>
+                
+                <label class="form__input-placeholder">Ваше имя и фамилия</label>
+               </div>
+               <div class="form__input">
+                <input type="text" placeholder=" " name="phone" required="">
+               
+                <label class="form__input-placeholder">Номер телефона</label>
+               </div>
+                
                 <div class="radio-container"><span>Вы мастер или бригадир?</span>
                   <ul class="nav">
                     <li><a class="active show senk" href="#tab-1" data-toggle="tab">Мастер</a></li>
                     <li><a href="#tab-2" data-toggle="tab">Бригадир</a></li>
+                    <input type="hidden" id="for-date" name="Дата">
+                    <input type="hidden" id="for-date2" name="Дата2">
                   </ul>
                 </div>
                 <div class="tab-content">
                   <div class="active show fade tab-pane" id="tab-1">
                     <input class="select" name="prof" readonly="" placeholder="Выберите профессию">
                     <input class="select" name="graj" readonly="" placeholder="Укажите гражданство">
+                    
+                    <input type="hidden" id="for-radios">
                   </div>
                   <div class="fade tab-pane" id="tab-2">
                     <input type="text" placeholder="Укажите кол-во мастеров" name="colvo">
-                    <div class="radio-container"><span>Выберите профессии</span>
+                    <input type="hidden" id="for-colvo" name="Кол-во мастеров"> 
+                    <div class="radio-container form_options"><span>Выберите профессии</span>
                       <label class="checkbox">
                         <input type="checkbox" name="che[]" value="Электромонтажник"><span class="checkbox__text">Электромонтажник</span>
                       </label>
@@ -329,9 +343,20 @@
                         <input type="checkbox" name="che[]" value="Сантехник"><span class="checkbox__text">Сантехник</span>
                       </label>
                     </div>
+                    <input type="hidden" id="for-profs" name="Профессии"> 
+                    
                   </div>
-                  <button class="btn-blue-big">Отправить</button>
+                  <input type="hidden" id="for-name" name="Имя и Фамилия">
+                  <input type="hidden" id="for-phone" name="Телефон">
+                  <input type="hidden" id="for-prof" name="Профессия">
+                  <input type="hidden" id="for-graj" name="Гражданство">
+                  
+                  <input type="hidden" id="for-profs" name="Профессии"> 
+                  <input type="hidden" id="for-colvo" name="Кол-во мастеров"> 
+                  <button class="btn-blue-big g-form__button">Отправить</button>
                 </div>
+
+              
               </form>
             </div>
           </div>
@@ -365,7 +390,7 @@
                 <p>Застройщик даёт контракт на отделку, мы вносим в систему параметры по технологиям, материалам, геометрии и качеству.</p>
               </div>
             </div>
-            <div class="buttons-mob"><a class="btn-outline-black" href="">Все вопросы</a><a class="btn-outline-black chat" href="№"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="buttons-mob"><a class="btn-outline-black" href="">Все вопросы</a><a class="btn-outline-black chat" href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.4167 2H4.58333C3.43274 2 2.5 2.93274 2.5 4.08333V11.75C2.5 12.9006 3.43274 13.8333 4.58333 13.8333H5.83333V17.7316C5.83333 17.7385 5.84119 17.7423 5.84658 17.7384C5.84697 17.7381 5.84731 17.7377 5.84763 17.7373L9.16667 13.8333H15.4167C16.5673 13.8333 17.5 12.9006 17.5 11.75V4.08333C17.5 2.93274 16.5673 2 15.4167 2Z" fill="#0066FF"/>
 </svg><span>Задать вопрос</span></a></div>
           </div>
@@ -396,12 +421,19 @@
       <div class="modal" id="callback" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
+            <div class="modal-content__close"></div>
             <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="form">
                 <form>
-                  <input type="text" required="" name="name" placeholder="Ваше имя">
-                  <input type="text" required="" name="name" placeholder="Ваш телефон">
+                  <div class="form__input">
+                    <input type="text" required="" name="name" placeholder=" ">
+                    <label class="form__input-placeholder">Ваше имя</label>
+                  </div>
+                  <div class="form__input">
+                    <input type="text" required="" name="name" placeholder=" ">
+                    <label class="form__input-placeholder">Ваш телефон</label>
+                  </div>
                   <input class="btn" type="submit" value="Отправить">
                 </form>
               </div>
@@ -409,9 +441,46 @@
           </div>
         </div>
       </div>
+      <div class="modal" id="quest" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-content__close"></div>
+            <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-body">
+              <div class="title-doc">Задать вопрос</div>
+              <div class="btns">
+                <a class="btns__link">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.33116 14.6692C5.10494 12.4486 3.56237 9.636 2.88646 6.56511C2.77547 5.97013 2.88811 5.35513 3.20276 4.83811C3.51741 4.3211 4.01191 3.93849 4.59136 3.76371L6.19446 3.25111L7.67586 6.08731L6.46426 7.29871L5.43426 8.32871L6.09836 9.6251C7.48401 12.3215 9.67907 14.5166 12.3755 15.9022L13.6719 16.5663L14.7019 15.5363L15.9133 14.3247L18.7495 15.8061L18.2369 17.4092C18.0621 17.9887 17.6795 18.4832 17.1625 18.7978C16.6455 19.1125 16.0305 19.2251 15.4355 19.1141C12.3646 18.4382 9.55197 16.8956 7.33136 14.6694L7.33116 14.6692ZM5.91696 16.0834C8.40662 18.581 11.5613 20.3109 15.0058 21.0672C16.0875 21.2861 17.212 21.0953 18.161 20.5319C19.1101 19.9685 19.8159 19.0726 20.1417 18.0181L21.1668 14.8122L15.5368 11.8722L13.2868 14.1222C10.9638 12.9276 9.07257 11.0362 7.87836 8.71301L10.1284 6.46301L7.18836 0.833008L3.98226 1.85871C2.92777 2.18447 2.03189 2.89034 1.46847 3.83936C0.905056 4.78838 0.714276 5.91287 0.933156 6.99461C1.68952 10.4391 3.41938 13.5938 5.91696 16.0834Z" fill="#0066FF"/>
+                    </svg>
+                    
+                  Позвонить
+                  <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.30546 7.02975L0.796875 1.74195L2.18188 0.299118L9.20333 7.03916L2.1727 13.7009L0.797092 12.2491L6.30546 7.02975Z" fill="#C7C7CC"/>
+                    </svg>
+                    
+                </a>
+                  <a href="#" class="btns__link chat">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 6H15M5 9H11M3.5 1H16.5C17.8807 1 19 2.11929 19 3.5V11.5C19 12.8807 17.8807 14 16.5 14H9L5.01658 17.4855C5.01012 17.4911 5 17.4866 5 17.478V14H3.5C2.11929 14 1 12.8807 1 11.5V3.5C1 2.11929 2.11929 1 3.5 1Z" stroke="#0066FF" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                      Написать
+                      <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.30546 7.02975L0.796875 1.74195L2.18188 0.299118L9.20333 7.03916L2.1727 13.7009L0.797092 12.2491L6.30546 7.02975Z" fill="#C7C7CC"/>
+                        </svg>
+                        
+                      
+                  </a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
       <div class="modal" id="senk" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
+            <div class="modal-content__close"></div>
             <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="suc"><img src="img/suc.png" alt=""/>
@@ -487,6 +556,7 @@
       <div class="modal" id="senk1" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
+            <div class="modal-content__close"></div>
             <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="suc"><img src="img/suc.png" alt=""/>
@@ -500,6 +570,7 @@
       <div class="modal" id="doc" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
+            <div class="modal-content__close"></div>
             <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="title-doc">Список документов</div>
@@ -523,6 +594,7 @@
       <div class="modal" id="console" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
+            <div class="modal-content__close"></div>
             <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="title-doc">Что такое сервис «Консоль»</div>
@@ -534,6 +606,7 @@
       <div class="modal" id="prof" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
+            <div class="modal-content__close"></div>
             <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="title-doc">Выберите профессию</div>
@@ -552,6 +625,7 @@
       <div class="modal" id="graj" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
+            <div class="modal-content__close"></div>
             <button class="close" data-dismiss="modal" aria-label="Close" type="button"><span aria-hidden="true">&times;</span></button>
             <div class="modal-body">
               <div class="title-doc">Укажите гражданство</div>
@@ -594,6 +668,7 @@
     <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/libs.min.js"></script><script async src="https://lib.usedesk.ru/secure.usedesk.ru/widget_161148_29945.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
