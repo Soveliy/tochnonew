@@ -729,10 +729,10 @@ header .menu ul
 {
     .shape
     {
-        min-height: 856px;
+        min-height: 800px;
         padding-top: 30px;
 
-        background: url('../img/shapemob.jpg') center top no-repeat;
+        background: url('../img/shapemob.png') center top no-repeat;
         background-size: cover;
     }
 }
@@ -867,6 +867,13 @@ header .menu ul
 
         margin-top: 20px; 
         margin-bottom: 30px;
+        max-width: 70%;
+        /* margin: 0 auto; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .shape .desk h3 br{
+        display: none;
     }
 }
 
@@ -1123,7 +1130,7 @@ h2.title.hide-mob
 }
 .worktomyself .items .item ul li
 {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 24px;
 
     display: flex;
@@ -1138,12 +1145,12 @@ h2.title.hide-mob
 {
     .worktomyself .items .item ul li
     {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 @media (max-width:991px){
     .worktomyself .items .item ul li{
-        font-size: 15px;
+        font-size: 16px;
         line-height: 20px;
         margin-bottom: 42px;
     }
@@ -1255,8 +1262,10 @@ h2.title.hide-mob
 
     pointer-events: none;
 
-    color: red;
-    border-color: red;
+    /* color: red; */
+    border-color: #D3D3D3;
+    color: rgba(0, 0, 0, 0.5);
+
 }
 .whoo .items-mob .item .title
 {
@@ -2842,7 +2851,7 @@ footer .copy a
     background: #f1f1f1;
 }
 
-.fiULNP
+.fiULNP,#uw-main-button
 {
     opacity: 0;
 }
