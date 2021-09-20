@@ -3104,3 +3104,24 @@ transition: .3s;
 .bitgAe{
     position: fixed;
 }
+.bg__chat{
+    display: none;
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .5;
+}
+.bg__chat.active{
+    display: block;
+}
+
+@media (max-width:600px){
+   .mobile-fix #uw-main-button{
+      width: 600px !important;
+    }
+    
+}

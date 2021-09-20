@@ -5,33 +5,36 @@ $(function () {
     
     $(".btn-outline-black.chat").click(function (e) {
       e.preventDefault();
-      // window.usedeskMessenger.open('chat');
       $('#quest').modal('show');
+      $("body").addClass("mobile-fix")
     });
-
+    
     $(".btns__link.chat").click(function (e) {
       e.preventDefault();
+      const screenWidth = window.screen.width
       window.usedeskMessenger.openChat();
-      //  window.usedeskMessenger.open('chat');
-      $(".fiULNP").trigger("click");
+      $("#uw-main-button").addClass("active")
+    
+    
     });
+    $("body").addClass("mobile-fix")
+
     $("form .nav li a").click(function(){
       let pm = $(this).text();
-      console.log(pm)
       $("#for-radios").val(pm)
       console.log($("#for-radios").val())
     })
 
     $(".modal .yak").click(function(){
-
+      $("body").removeClass("mobile-fix")
       $(this).closest(".modal").modal("hide");
     })
 
     $("#quest .modal-content__close,#quest .close").click(function(){
-      console.log("q")
-     
-      window.usedeskMessenger.close("chat");
 
+     
+      // window.usedeskMessenger.close("chat");
+      window.usedeskMessenger.close();
     })
     
 
