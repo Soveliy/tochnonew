@@ -12,7 +12,7 @@ $(function () {
     $(".btns__link.chat").click(function (e) {
       e.preventDefault();
       window.usedeskMessenger.openChat();
-       window.usedeskMessenger.open('chat');
+      //  window.usedeskMessenger.open('chat');
       $(".fiULNP").trigger("click");
     });
     $("form .nav li a").click(function(){
@@ -21,6 +21,19 @@ $(function () {
       $("#for-radios").val(pm)
       console.log($("#for-radios").val())
     })
+
+    $(".modal .yak").click(function(){
+
+      $(this).closest(".modal").modal("hide");
+    })
+
+    $("#quest .modal-content__close,#quest .close").click(function(){
+      console.log("q")
+     
+      window.usedeskMessenger.close("chat");
+
+    })
+    
 
     
     $('.slider-contact').slick({

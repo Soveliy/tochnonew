@@ -236,7 +236,12 @@ select::-ms-expand
 {
     display: none;
 }
-
+.modal{
+    z-index: 960;
+}
+.modal-backdrop{
+    z-index: 950;
+}
 .modal-dialog
 {
     width: calc(100% - 30px); 
@@ -725,7 +730,7 @@ header .menu ul
     }
 }
 
-@media (max-width: 500px)
+@media (max-width: 750px)
 {
     .shape
     {
@@ -1150,8 +1155,8 @@ h2.title.hide-mob
 }
 @media (max-width:991px){
     .worktomyself .items .item ul li{
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 18px;
+        line-height: 24px;
         margin-bottom: 42px;
     }
     .worktomyself .items .item ul li:last-child{
@@ -1166,7 +1171,8 @@ h2.title.hide-mob
     {
         display: block;
 
-        width: calc(50% - 10px);
+        /* width: calc(50% - 10px); */
+        width: 100%;
         margin-bottom: 22px;
     }
     .worktomyself .items .item ul li br
@@ -1255,7 +1261,7 @@ h2.title.hide-mob
 
     letter-spacing: -.2px;
 }
-.whoo .items-mob .item .btn-outline.closed
+.whoo .items-mob .item .btn-outline.closed,.whoo .items-mob .item .btn-outline.closed
 {
     max-width: 117px;
     padding: 5px; 
@@ -1266,6 +1272,22 @@ h2.title.hide-mob
     border-color: #D3D3D3;
     color: rgba(0, 0, 0, 0.5);
 
+}
+.whoo .items .item .btn-outline.closed{
+    pointer-events: none;
+
+    /* color: red; */
+    border-color: #D3D3D3;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+.modal.prof .yak{
+    font-size: 17px;
+    line-height: 22px;
+    padding: 13px 10px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 15px;
 }
 .whoo .items-mob .item .title
 {
@@ -2886,7 +2908,7 @@ footer .copy a
     }
 }
 
-@media (max-width:500px){
+@media (max-width:600px){
     .wrapper{
         position: relative;
         overflow: hidden;
@@ -2937,8 +2959,8 @@ footer .copy a
     }
     .worktomyself .items .item .title{
         margin-bottom: 15px;
-        font-size: 17px;
-        line-height: 25px;
+        font-size: 20px;
+        line-height: 28px;
     }
     .whoo{
         padding-bottom: 40px;
@@ -3075,4 +3097,10 @@ transition: .3s;
 }
 #usedesk-messenger{
     z-index: 10000 !important;
+}
+.hEOaET{
+    z-index: 2000;
+}
+.bitgAe{
+    position: fixed;
 }
