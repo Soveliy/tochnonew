@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: /portfolio/
+Sitemap: https://tochno.pro/sitemap.xml
