@@ -11,16 +11,15 @@
 }
 
 @font-face {
-    font-family: 'Normalidad Bold Var';
-    src: url('NormalidadCompact-Bold.eot');
-    src: local('Normalidad Bold Var'), local('NormalidadCompact-Bold'),
-        url('NormalidadCompact-Bold.eot?#iefix') format('embedded-opentype'),
-        url('NormalidadCompact-Bold.woff2') format('woff2'),
-        url('NormalidadCompact-Bold.woff') format('woff'),
-        url('NormalidadCompact-Bold.ttf') format('truetype');
+    font-family: 'Normalidad Wide';
+    src: url('NormalidadWide-Bold.woff2') format('woff2'),
+        url('NormalidadWide-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
+
+
 
 @font-face {
     font-family: 'Normalidad Compact Var';

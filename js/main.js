@@ -290,9 +290,9 @@ $(function () {
     $("[name='graj']").click(function () {
       $('#graj').modal('show');
     });
-    $("[name='graj2']").click(function () {
-      $('#graj2').modal('show');
-    });
+    // $("[name='graj2']").click(function () {
+    //   $('#graj2').modal('show');
+    // });
     $("[name='prof']").click(function () {
       $('#prof').modal('show');
     });

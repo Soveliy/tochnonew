@@ -63,13 +63,16 @@
                   на отделке
                 </h1>
                 <!-- <h3>Точно — сервис для высокого заработка <br>на строительных площадках. Работайте<br> без прорабов.</h3> -->
-                <h3>Точно — это сервис для работы на строительных  <br>
+                <h3 class="desk">Точно — это сервис для работы на строительных  <br>
                   площадках без прорабов. Ранний доступ  <br>
                   к приложению открыт только для опытных мастеров <br> </h3>
                 <a class="btn-blue-big yak" href="#oformlenie">Хочу работать</a>
               </div>
               <img class="desk" src="img/hero_new_desk.png" alt="">
               <img class="mob" src="img/hero_new_mob.png" alt="">
+              <h3 class="mob">Точно — это сервис для работы на строительных  <br>
+                площадках без прорабов. Ранний доступ  <br>
+                к приложению открыт только для опытных мастеров <br> </h3>
             </div>
           </div>
         </div>
@@ -177,7 +180,7 @@
                 <div class="item">
                   <div class="left">
                     <div class="title">Каменщик</div>
-                    <div class="text">до 150 000 ₽ в месяц</div>
+                    <div class="text">до 175 000 ₽ в месяц</div>
                   </div><a class="btn-outline" href="#itemprof11" data-toggle="modal">Подробнее</a>
                 </div>
                 <!-- <div class="item">
@@ -305,8 +308,8 @@
                   <div class="desk">
                     <div class="title">Каменщик</div>
                     <div class="price">
-                      <div class="item-price"><span>в неделю</span><b>~ 37 500 ₽</b></div>
-                      <div class="item-price"><span>в месяц</span><b>~ 150 000 ₽</b></div>
+                      <div class="item-price"><span>в неделю</span><b>~ 44 500 ₽</b></div>
+                      <div class="item-price"><span>в месяц</span><b>~ 175 000 ₽</b></div>
                     </div><a class="btn-outline" href="#itemprof11" data-toggle="modal">Подробнее</a>
                   </div>
                 </div>
@@ -333,7 +336,7 @@
           <img src="img/work/fullimage.jpg" class="fullimage" alt="">
         <div class="contact">
           <div class="container">
-            <h2 class="title title--center  sld">Где вы будете работать</h2>
+            <h2 class="title title--center  sld">Где вы будете <br class="mob"> работать</h2>
             <div class="-con">
               <div class="flex">
                 <div class="map" id="map"></div>
@@ -409,31 +412,49 @@
                 <div class="slider-kak-container">
                  
                     <div class="slider-kak">
-                      <div class="item"><img src="img/for_video2.jpg" alt=""/>
+                      <div class="item">
+                        <div class="slider-kak__title">
+                          Видеоинструкция
+                        </div>
+                        <img src="img/frame_new.png" alt=""/>
                         <a data-fancybox href="video/desk.mp4" class="on-desktop slider-kak-container__video"></a>
                         <a data-fancybox href="video/mob.mp4" data-height="360" class="on-mob slider-kak-container__video"></a>
-                        </div>
-                      <div class="item"><img src="img/frame_new.png" alt=""/>
-                       
-                        
                       </div>
+                    
                      
                       <!-- <div class="item">
                       <img src="img/frame_new.png" alt="">
                        
                       </div> -->
-                      <div class="item"><img src="img/photo/1.jpg" alt=""></div>
+                      <div class="item">
+                        <div class="slider-kak__title">
+                          Оплата за задания раз в неделю
+                        </div>
+                        <img src="img/photo/1.png" alt="">
+                      </div>
                      
-                      <div class="item"><img src="img/photo/3.jpg" alt=""></div>
-                      <div class="item"><img src="img/photo/4.jpg" alt=""></div>
-                    </div>
-                    <div class="snos-mob">
-                      <p>Сервис Точно связывает исполнителей и девелоперов.</p>
-                      <p>Застройщик даёт контракт на отделку, мы вносим в систему параметры по технологиям, материалам и качеству.</p>
-                      <p>На основе этих данных алгоритм выдаёт задание мастеру, учитывая его опыт и навыки, а результат работы проверяет контролёр.</p>
-                     
+                      <div class="item">
+                        <div class="slider-kak__title">
+                          Возможность выбрать задание
+                        </div>
+                        <img src="img/photo/2.png" alt="">
+                      </div>
+                      <div class="item">
+                        <div class="slider-kak__title">
+                          Быстрая обратная связь 
+                          и конструктивные замечания к заданиям
+                        </div>
+                        <img src="img/photo/3.png" alt="">
+                      </div>
                    
+                    <div class="item">
+                      <div class="slider-kak__title">
+                        Можно подключить несколько строительных специальностей
+                      </div>
+                      <img src="img/photo/4.png" alt="">
+                    </div>
                   </div>
+                   
                 </div>
               </div>
             </div>
@@ -444,7 +465,7 @@
           <div class="container">
      
             <div class="form">
-              <h2 class="title">Оформитесь за 20 минут</h2>
+              <h2 class="title">Оформитесь <br> за 20 минут</h2>
               <form id="1">
                <div class="form__input">
                 <input type="text" id="name" placeholder=" " name="name" class="g-form__input" value="" >
@@ -497,7 +518,24 @@
                     </div>
                     <input type="text" id="prof-test-fp" name="test1" required>
                     <input class="select" name="graj"  placeholder="Укажите гражданство" required>
-                    <input class="select" name="graj2"  placeholder="Предпочитаемый способ связи" required>
+                    <!-- <input class="select" name="graj2"  placeholder="Предпочитаемый способ связи" required> -->
+                    <div class="radio-container radio-container--column"><span>Предпочитаемый способ связи</span>
+                      <label class="radio">
+                        <input type="radio" name="graj2" value="Телефонный звонок" required>
+                        <b></b>
+                        <span>Телефонный звонок</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="graj2" value="WhatsApp" required> 
+                        <b></b>
+                        <span>WhatsApp</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="graj2" value="Telegram" required> 
+                        <b></b>
+                        <span>Telegram</span>
+                      </label>
+                    </div>
                     
                     <input type="hidden" id="for-radios">
                   </div>
@@ -646,6 +684,7 @@
               Работы будет <br>
 много — <span>это точно</span>
             </h2>
+            <img src="img/footer_mob.jpg" alt="" class="footer__mob">
             <div class="top">
               <img src="img/footer_logo.svg" alt="">
              
